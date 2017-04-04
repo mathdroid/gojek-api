@@ -1,0 +1,29 @@
+{
+  "name": "gojek-api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "np": "^2.13.1"
+  },
+  "scripts": {
+    "build": "eslint src --fix && babel src -d build -i *.test.js",
+    "prepublish": "npm run build",
+    "test:once": "ava src/**/*.test.js",
+    "dev": "npm run build -- -w",
+    "test": "ava src/**/*.test.js --watch",
+    "verify": "npm run build && npm run test:once",
+    "release": "np"
+  },
+  "dependencies": {
+    "axios": "^0.16.0",
+    "bluebird": "^3.5.0"
+  }
+}
