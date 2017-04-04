@@ -21,5 +21,9 @@
     "test": "ava src/**/*.test.js --watch",
     "verify": "npm run build && npm run test:once",
     "release": "np"
+  },
+  "dependencies": {
+    "axios": "^0.16.0",
+    "bluebird": "^3.5.0"
   }
 }
