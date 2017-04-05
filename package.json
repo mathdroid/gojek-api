@@ -1,7 +1,12 @@
 {
   "name": "gojek-api",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "build/index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "build"
+  ],
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.18.2",
@@ -25,5 +30,8 @@
   "dependencies": {
     "axios": "^0.16.0",
     "bluebird": "^3.5.0"
+  },
+  "babel": {
+    "presets": ["env"]
   }
 }
